@@ -1,6 +1,10 @@
 import { NextRequest } from 'next/server'
-import { kv } from '@vercel/kv'
+import { Redis } from '@upstash/redis'
 import type { QueueItem } from '@/types/clipiq'
+
+function getRedis() {
+  return new Redis({ url: process.env.KV_REST_API_URL!, token: process.env.KV_REST_API_TOKEN! })
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,6 +14,7 @@ export async function POST(req: NextRequest) {
       return Response.json({ error: 'Missing itemId or action' }, { status: 400 })
     }
 
+    const kv = getRedis()
     const keys = await kv.keys('clipiq:queue:*')
 
     for (const key of keys) {
