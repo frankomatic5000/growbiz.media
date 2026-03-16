@@ -7,6 +7,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     Google({
       clientId: process.env.AUTH_GOOGLE_ID!,
       clientSecret: process.env.AUTH_GOOGLE_SECRET!,
+      authorization: {
+        params: {
+          scope: [
+            'openid',
+            'email',
+            'profile',
+            'https://www.googleapis.com/auth/drive.readonly',
+          ].join(' '),
+          access_type: 'offline',
+          prompt: 'consent',
+        },
+      },
     }),
     Nodemailer({
       server: {
@@ -25,15 +37,22 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     error: '/clipiq/login',
   },
   callbacks: {
-    jwt({ token, user }) {
-      if (user) {
-        token.role = (user as { role?: string }).role ?? 'free'
+    jwt({ token, account }) {
+      if (account?.provider === 'google') {
+        token.googleAccessToken = account.access_token
+        token.googleRefreshToken = account.refresh_token
+        token.googleTokenExpiry = account.expires_at
+      }
+      if (account) {
+        token.role = 'free'
       }
       return token
     },
     session({ session, token }) {
+      ;(session as unknown as Record<string, unknown>).googleAccessToken = token.googleAccessToken
+      ;(session as unknown as Record<string, unknown>).googleTokenExpiry = token.googleTokenExpiry
       if (session.user) {
-        (session.user as { role?: string }).role = (token.role as string) ?? 'free'
+        ;(session.user as unknown as Record<string, unknown>).role = token.role ?? 'free'
       }
       return session
     },

@@ -99,7 +99,7 @@ export default async function DashboardPage() {
                 >
                   <div className="flex-1 min-w-0">
                     <p className="font-syne text-clipiq-text text-sm truncate">{item.title}</p>
-                    <p className="text-clipiq-muted text-xs font-syne">{item.platform} · {item.brandName}</p>
+                    <p className="text-clipiq-muted text-xs font-syne">{item.platforms?.join(", ")} · {item.brandName}</p>
                   </div>
                   <span className={`text-xs font-syne px-2 py-0.5 rounded-full border ${
                     item.status === 'approved' ? 'text-clipiq-green border-clipiq-green/30 bg-clipiq-green/10' :

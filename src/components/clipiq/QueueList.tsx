@@ -10,6 +10,7 @@ const STATUS_STYLES: Record<PostStatus, string> = {
   approved: 'text-clipiq-green border-clipiq-green/40 bg-clipiq-green/10',
   scheduled: 'text-clipiq-accent border-clipiq-accent/40 bg-clipiq-accent/10',
   published: 'text-clipiq-muted border-clipiq-border',
+  failed: 'text-clipiq-red border-clipiq-red/40 bg-clipiq-red/10',
 }
 
 const FILTER_OPTIONS: { value: PostStatus | 'all'; label: string }[] = [
@@ -97,7 +98,7 @@ export function QueueList({ initialQueue, userId }: Props) {
                   {item.status}
                 </span>
               </div>
-              <p className="text-clipiq-muted text-xs font-syne mb-2">{item.platform} · {item.brandName}{item.guest ? ` · ${item.guest}` : ''}</p>
+              <p className="text-clipiq-muted text-xs font-syne mb-2">{item.platforms?.join(", ")} · {item.brandName}{item.guest ? ` · ${item.guest}` : ''}</p>
               <p className="text-clipiq-muted text-xs font-syne line-clamp-2 leading-relaxed">{item.hook}</p>
 
               {/* Actions */}

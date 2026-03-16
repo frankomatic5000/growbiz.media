@@ -45,7 +45,7 @@ export async function GET(req: Request) {
     avgHookScore: hookCount ? Math.round(totalHookScore / hookCount) : 0,
     pendingApprovals,
     scheduledThisWeek,
-    topPost: topPost ? { title: topPost.title, platform: topPost.platform, hookScore: topPost.hookScore ?? 0 } : undefined,
+    topPost: topPost ? { title: topPost.title, platform: topPost.platforms?.[0] ?? '', hookScore: topPost.hookScore ?? 0 } : undefined,
   })
 
   return Response.json({ ok: true })

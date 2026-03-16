@@ -6,10 +6,9 @@ import type { QueueItem, PlatformKey } from '@/types/clipiq'
 
 const PLATFORM_COLORS: Record<PlatformKey, string> = {
   instagram: 'bg-pink-500',
-  youtube: 'bg-red-500',
+  facebook: 'bg-blue-500',
   tiktok: 'bg-cyan-400',
   x: 'bg-gray-400',
-  linkedin: 'bg-blue-500',
 }
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -97,7 +96,7 @@ export function ContentCalendar({ events }: Props) {
                         <button
                           key={e.id}
                           onClick={() => setSelected(e)}
-                          className={`w-full text-left px-1.5 py-0.5 rounded text-[9px] font-syne font-semibold text-white truncate ${PLATFORM_COLORS[e.platform]}`}
+                          className={`w-full text-left px-1.5 py-0.5 rounded text-[9px] font-syne font-semibold text-white truncate ${PLATFORM_COLORS[e.platforms?.[0] ?? 'x']}`}
                         >
                           {e.title}
                         </button>
@@ -121,7 +120,7 @@ export function ContentCalendar({ events }: Props) {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <p className="font-syne font-bold text-clipiq-text text-sm">{selected.title}</p>
-                <p className="text-clipiq-muted text-xs font-syne">{selected.platform} · {selected.brandName}</p>
+                <p className="text-clipiq-muted text-xs font-syne">{selected.platforms?.join(', ')} · {selected.brandName}</p>
               </div>
               <button onClick={() => setSelected(null)} className="text-clipiq-muted hover:text-clipiq-text">
                 <X size={16} />
