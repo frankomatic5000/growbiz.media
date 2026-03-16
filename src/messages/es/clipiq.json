@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "generate": "Generar",
+    "queue": "Cola",
+    "calendar": "Calendario",
+    "brands": "Perfiles de Marca",
+    "analytics": "Análisis"
+  },
+  "generate": {
+    "title": "Generar Contenido",
+    "subtitle": "Pega el transcript → obtén captions optimizados para todas las plataformas",
+    "episodeTitle": "Título del episodio / video",
+    "guestName": "Nombre del invitado (opcional)",
+    "guestLocation": "Ubicación del invitado",
+    "contentType": "Tipo de contenido",
+    "transcript": "Transcript / citas clave",
+    "transcriptPlaceholder": "Pega el transcript completo, los subtítulos generados automáticamente, o las frases y momentos clave del episodio...",
+    "extraKeywords": "Palabras clave adicionales (opcional)",
+    "tone": "Tono del contenido",
+    "cta": "CTA principal",
+    "platforms": "Plataformas objetivo",
+    "generateButton": "Generar Todos los Captions",
+    "generating": "Generando...",
+    "hookScore": "Puntuación del Hook",
+    "hookHigh": "Alto potencial",
+    "hookMed": "Potencial medio",
+    "hookLow": "Necesita mejora",
+    "bestHook": "Mejor hook detectado",
+    "altHooks": "Hooks alternativos",
+    "caption": "Caption",
+    "hashtags": "Hashtags",
+    "copyPost": "Copiar post completo",
+    "addToQueue": "Agregar a la cola",
+    "addedToQueue": "Agregado a la cola",
+    "bestTime": "Mejor horario para publicar",
+    "formatTip": "Consejo de formato"
+  },
+  "queue": {
+    "title": "Cola de Publicación",
+    "subtitle": "Revisa, aprueba y programa tus posts",
+    "empty": "La cola está vacía",
+    "emptyHint": "Genera contenido y agrega posts a tu cola.",
+    "status": {
+      "draft": "Borrador",
+      "review": "Necesita revisión",
+      "approved": "Aprobado",
+      "scheduled": "Programado",
+      "published": "Publicado"
+    },
+    "approve": "Aprobar",
+    "schedule": "Programar",
+    "remove": "Eliminar"
+  },
+  "calendar": {
+    "title": "Calendario de Contenido"
+  },
+  "brands": {
+    "title": "Perfiles de Marca",
+    "addBrand": "Nueva marca",
+    "brandName": "Nombre de la marca",
+    "handle": "Perfil en redes",
+    "audience": "Audiencia objetivo",
+    "voice": "Voz / tono de marca",
+    "niche": "Nicho de contenido",
+    "language": "Idioma principal"
+  },
+  "analytics": {
+    "title": "Análisis",
+    "postsPublished": "Posts publicados",
+    "avgHookScore": "Puntuación media del hook",
+    "avgEngagement": "Engagement promedio",
+    "timeSaved": "Tiempo ahorrado (est.)"
+  },
+  "auth": {
+    "signIn": "Iniciar sesión en ClipIQ",
+    "tagline": "Inteligencia de Contenido para Estudios de Medios",
+    "continueWithGoogle": "Continuar con Google",
+    "orEmail": "O inicia sesión con email",
+    "emailPlaceholder": "tu@email.com",
+    "sendMagicLink": "Enviar enlace mágico",
+    "backToSite": "← Volver a growbiz.media",
+    "termsNote": "Al iniciar sesión, aceptas nuestros Términos de Servicio y Política de Privacidad."
+  }
+}

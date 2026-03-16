@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Cormorant_Garamond, DM_Sans } from 'next/font/google'
+import { Playfair_Display, Cormorant_Garamond, DM_Sans, Syne } from 'next/font/google'
 import './globals.css'
-import { Navbar } from '@/components/shared/Navbar'
-import { Footer } from '@/components/shared/Footer'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -20,6 +18,12 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-dm-sans',
+})
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-syne',
 })
 
 export const metadata: Metadata = {
@@ -51,11 +55,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${dmSans.variable} ${syne.variable}`}>
       <body className="antialiased font-body bg-cream text-ink">
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )
