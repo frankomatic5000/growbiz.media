@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "generate": "Gerar",
+    "queue": "Fila",
+    "calendar": "Calendário",
+    "brands": "Perfis de Marca",
+    "analytics": "Análises"
+  },
+  "generate": {
+    "title": "Gerar Conteúdo",
+    "subtitle": "Cole o transcript → receba captions otimizadas para todas as plataformas",
+    "episodeTitle": "Título do episódio / vídeo",
+    "guestName": "Nome do convidado (opcional)",
+    "guestLocation": "Localização do convidado",
+    "contentType": "Tipo de conteúdo",
+    "transcript": "Transcript / frases principais",
+    "transcriptPlaceholder": "Cole o transcript completo, as legendas geradas automaticamente, ou os principais momentos e frases do episódio...",
+    "extraKeywords": "Palavras-chave extras (opcional)",
+    "tone": "Tom do conteúdo",
+    "cta": "CTA principal",
+    "platforms": "Plataformas alvo",
+    "generateButton": "Gerar Todas as Captions",
+    "generating": "Gerando...",
+    "hookScore": "Pontuação do Hook",
+    "hookHigh": "Alto potencial",
+    "hookMed": "Potencial médio",
+    "hookLow": "Precisa melhorar",
+    "bestHook": "Melhor hook identificado",
+    "altHooks": "Hooks alternativos",
+    "caption": "Caption",
+    "hashtags": "Hashtags",
+    "copyPost": "Copiar post completo",
+    "addToQueue": "Adicionar à fila",
+    "addedToQueue": "Adicionado à fila",
+    "bestTime": "Melhor horário para postar",
+    "formatTip": "Dica de formato"
+  },
+  "queue": {
+    "title": "Fila de Publicação",
+    "subtitle": "Revise, aprove e agende seus posts",
+    "empty": "A fila está vazia",
+    "emptyHint": "Gere conteúdo e adicione posts à sua fila.",
+    "status": {
+      "draft": "Rascunho",
+      "review": "Aguardando revisão",
+      "approved": "Aprovado",
+      "scheduled": "Agendado",
+      "published": "Publicado"
+    },
+    "approve": "Aprovar",
+    "schedule": "Agendar",
+    "remove": "Remover"
+  },
+  "calendar": {
+    "title": "Calendário de Conteúdo"
+  },
+  "brands": {
+    "title": "Perfis de Marca",
+    "addBrand": "Nova marca",
+    "brandName": "Nome da marca",
+    "handle": "Perfil nas redes",
+    "audience": "Público-alvo",
+    "voice": "Tom de voz da marca",
+    "niche": "Nicho de conteúdo",
+    "language": "Idioma principal"
+  },
+  "analytics": {
+    "title": "Análises",
+    "postsPublished": "Posts publicados",
+    "avgHookScore": "Pontuação média do hook",
+    "avgEngagement": "Engajamento médio",
+    "timeSaved": "Tempo economizado (est.)"
+  },
+  "auth": {
+    "signIn": "Entrar no ClipIQ",
+    "tagline": "Inteligência de Conteúdo para Estúdios de Mídia",
+    "continueWithGoogle": "Continuar com o Google",
+    "orEmail": "Ou entre com seu email",
+    "emailPlaceholder": "seu@email.com",
+    "sendMagicLink": "Enviar link mágico",
+    "backToSite": "← Voltar para growbiz.media",
+    "termsNote": "Ao entrar, você concorda com nossos Termos de Serviço e Política de Privacidade."
+  }
+}

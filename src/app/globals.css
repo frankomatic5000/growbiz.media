@@ -15,6 +15,22 @@
   --font-display: var(--font-playfair), Georgia, serif;
   --font-editorial: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-syne: var(--font-syne), system-ui, sans-serif;
+
+  /* ClipIQ brand tokens */
+  --color-clipiq-bg:      #0A0A0A;
+  --color-clipiq-surface: #111111;
+  --color-clipiq-card:    #181818;
+  --color-clipiq-card2:   #1F1F1F;
+  --color-clipiq-border:  #262626;
+  --color-clipiq-border2: #333333;
+  --color-clipiq-accent:  #6C63FF;
+  --color-clipiq-accent2: #4F46E5;
+  --color-clipiq-text:    #F2F0EC;
+  --color-clipiq-muted:   #777777;
+  --color-clipiq-green:   #3ECF8E;
+  --color-clipiq-warn:    #F0A030;
+  --color-clipiq-red:     #FF5555;
 }
 
 body {
