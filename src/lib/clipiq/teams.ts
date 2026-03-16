@@ -13,7 +13,7 @@ const PLATFORM_COLORS: Record<string, string> = {
 export async function notifyTeamsApproval(item: QueueItem): Promise<void> {
   if (!WEBHOOK_URL) return
 
-  const accentColor = PLATFORM_COLORS[item.platform] ?? '6C63FF'
+  const accentColor = PLATFORM_COLORS[item.platforms?.[0] ?? "x"] ?? '6C63FF'
   const appUrl = process.env.NEXTAUTH_URL ?? 'https://growbiz.media'
   const itemUrl = `${appUrl}/clipiq/queue?item=${item.id}`
 
@@ -34,14 +34,14 @@ export async function notifyTeamsApproval(item: QueueItem): Promise<void> {
                 { title: 'Title', value: item.title },
                 { title: 'Guest', value: item.guest || '—' },
                 { title: 'Brand', value: item.brandName },
-                { title: 'Platform', value: item.platform.charAt(0).toUpperCase() + item.platform.slice(1) },
+                { title: 'Platform', value: item.platforms?.map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(", ") ?? "" },
                 { title: 'Hook score', value: item.hookScore ? `${item.hookScore}/100` : '—' },
               ],
             },
             { type: 'TextBlock', text: `**Hook:** ${item.hook}`, wrap: true, spacing: 'Medium' },
             {
               type: 'TextBlock',
-              text: item.caption.length > 200 ? item.caption.slice(0, 200) + '…' : item.caption,
+              text: item.hook,
               wrap: true,
               color: 'Default',
               isSubtle: true,

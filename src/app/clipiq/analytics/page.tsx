@@ -21,7 +21,9 @@ export default async function AnalyticsPage() {
   const timeSaved = published.length * 25 // est. 25 min per post
 
   const platformCounts = queue.reduce<Record<string, number>>((acc, item) => {
-    acc[item.platform] = (acc[item.platform] ?? 0) + 1
+    for (const p of item.platforms ?? []) {
+      acc[p] = (acc[p] ?? 0) + 1
+    }
     return acc
   }, {})
 

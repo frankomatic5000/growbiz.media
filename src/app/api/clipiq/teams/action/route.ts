@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server'
 import { Redis } from '@upstash/redis'
+import { publishQueueItem } from '@/lib/clipiq/publish'
 import type { QueueItem } from '@/types/clipiq'
 
 function getRedis() {
@@ -22,17 +23,29 @@ export async function POST(req: NextRequest) {
       const idx = queue.findIndex((q) => q.id === itemId)
       if (idx === -1) continue
 
-      queue[idx].status = action === 'approve' ? 'approved' : 'review'
-      queue[idx].updatedAt = new Date().toISOString()
-      await kv.set(key, queue)
+      if (action === 'approve') {
+        // Trigger immediate publish
+        const published = await publishQueueItem(queue[idx])
+        queue[idx] = published
+        await kv.set(key, queue)
 
-      return Response.json({
-        type: 'message',
-        text:
-          action === 'approve'
-            ? `✓ "${queue[idx].title}" approved and ready to schedule.`
-            : `"${queue[idx].title}" sent back for changes.`,
-      })
+        const allOk = Object.values(published.publishResults ?? {}).every((r) => r.success)
+        return Response.json({
+          type: 'message',
+          text: allOk
+            ? `✓ "${queue[idx].title}" published successfully to ${queue[idx].platforms.join(', ')}.`
+            : `⚠ "${queue[idx].title}" published with some errors. Check the dashboard.`,
+        })
+      } else {
+        queue[idx].status = 'review'
+        queue[idx].updatedAt = new Date().toISOString()
+        await kv.set(key, queue)
+
+        return Response.json({
+          type: 'message',
+          text: `"${queue[idx].title}" sent back for changes.`,
+        })
+      }
     }
 
     return Response.json({ error: 'Item not found' }, { status: 404 })

@@ -8,10 +8,9 @@ import { PlatformResults } from './PlatformResults'
 
 const PLATFORMS: { key: PlatformKey; label: string; color: string }[] = [
   { key: 'instagram', label: 'Instagram', color: 'text-pink-500 border-pink-500/40' },
-  { key: 'youtube', label: 'YouTube', color: 'text-red-500 border-red-500/40' },
+  { key: 'facebook', label: 'Facebook', color: 'text-blue-500 border-blue-500/40' },
   { key: 'tiktok', label: 'TikTok', color: 'text-cyan-400 border-cyan-400/40' },
   { key: 'x', label: 'X / Twitter', color: 'text-gray-400 border-gray-400/40' },
-  { key: 'linkedin', label: 'LinkedIn', color: 'text-blue-500 border-blue-500/40' },
 ]
 
 const TONES: { value: ContentTone; label: string }[] = [

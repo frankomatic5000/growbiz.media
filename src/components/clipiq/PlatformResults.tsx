@@ -6,10 +6,9 @@ import type { GenerateResult, PlatformKey } from '@/types/clipiq'
 
 const PLATFORM_LABELS: Record<PlatformKey, string> = {
   instagram: 'Instagram',
-  youtube: 'YouTube',
+  facebook: 'Facebook',
   tiktok: 'TikTok',
   x: 'X / Twitter',
-  linkedin: 'LinkedIn',
 }
 
 interface Props {
