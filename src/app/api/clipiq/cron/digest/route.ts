@@ -1,6 +1,8 @@
-import { kv } from '@vercel/kv'
+import { Redis } from '@upstash/redis'
 import { notifyTeamsDigest } from '@/lib/clipiq/teams'
 import type { QueueItem } from '@/types/clipiq'
+
+const kv = new Redis({ url: process.env.KV_REST_API_URL!, token: process.env.KV_REST_API_TOKEN! })
 
 export async function GET(req: Request) {
   const authHeader = req.headers.get('authorization')
