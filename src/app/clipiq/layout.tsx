@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ClipIQSidebar } from '@/components/clipiq/ClipIQSidebar'
+import { ClipIQProviders } from '@/components/clipiq/ClipIQProviders'
 
 export const metadata: Metadata = {
   title: 'ClipIQ — Content Intelligence for Media Studios',
@@ -8,11 +9,13 @@ export const metadata: Metadata = {
 
 export default function ClipIQLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-clipiq-bg text-clipiq-text">
-      <ClipIQSidebar />
-      <div className="md:ml-[220px] flex flex-col min-h-screen">
-        {children}
+    <ClipIQProviders>
+      <div className="min-h-screen bg-clipiq-bg text-clipiq-text">
+        <ClipIQSidebar />
+        <div className="md:ml-[220px] flex flex-col min-h-screen">
+          {children}
+        </div>
       </div>
-    </div>
+    </ClipIQProviders>
   )
 }
