@@ -27,7 +27,7 @@ export function AboutSnippet() {
           <h2 className="font-display font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
             One Holding.
             <br />
-            Eight Brands. One Mission.
+            Nine Brands. One Mission.
           </h2>
           <div className="space-y-4 font-body text-ink/70 leading-relaxed text-base md:text-lg">
             <p>
