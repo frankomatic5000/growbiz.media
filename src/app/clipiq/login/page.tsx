@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { LoginForm } from './LoginForm'
 
 export const metadata: Metadata = {
@@ -48,9 +49,9 @@ export default function LoginPage() {
         </p>
 
         <div className="text-center mt-4">
-          <a href="/" className="text-clipiq-muted text-xs font-syne hover:text-clipiq-text transition-colors">
+          <Link href="/" className="text-clipiq-muted text-xs font-syne hover:text-clipiq-text transition-colors">
             ← Back to growbiz.media
-          </a>
+          </Link>
         </div>
       </div>
     </div>

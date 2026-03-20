@@ -21,7 +21,7 @@ export function BrandStatement() {
         </div>
 
         <p className="font-editorial text-3xl md:text-4xl lg:text-5xl text-navy leading-snug font-semibold">
-          "A Global Media of Virtues"
+          &quot;A Global Media of Virtues&quot;
         </p>
 
         <div className="flex items-center gap-6 mt-8 justify-center">
