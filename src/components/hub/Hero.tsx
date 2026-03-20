@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
 
 const containerVariants: Variants = {
   hidden: {},
@@ -73,26 +74,42 @@ export function Hero() {
               variants={itemVariants}
               className="font-body text-cream/70 text-lg leading-relaxed mb-10 max-w-2xl"
             >
-              A multicultural media holding empowering entrepreneurs, founders, and leaders — globally. Eight brands, one mission, infinite impact.
+              A multicultural media holding empowering entrepreneurs, founders, and leaders — globally. Nine brands, one mission, infinite impact.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/subsidiaries"
+                href="/contact"
                 className="font-body font-semibold bg-mustard text-navy px-8 py-4 rounded-sm hover:bg-mustard-dark transition-colors uppercase tracking-wide text-sm"
               >
-                Explore Our Universe
+                Work With Us
               </Link>
               <Link
-                href="/about"
+                href="/subsidiaries"
                 className="font-body font-semibold border-2 border-cream/40 text-cream px-8 py-4 rounded-sm hover:bg-cream/10 transition-colors uppercase tracking-wide text-sm"
               >
-                Meet GrowBiz
+                Explore Our Universe
               </Link>
             </motion.div>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator - appears after 2 seconds */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+      >
+        <span className="font-body text-cream/60 text-sm tracking-wide">Scroll to explore</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+        >
+          <ChevronDown className="w-6 h-6 text-cream/60" />
+        </motion.div>
+      </motion.div>
 
     </section>
   )

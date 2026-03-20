@@ -23,7 +23,7 @@ export function CTABanner() {
           href="/contact"
           className="inline-block font-body font-semibold bg-navy text-cream px-10 py-4 rounded-sm hover:bg-navy-dark transition-colors uppercase tracking-wide text-sm"
         >
-          Start Here →
+          Work With Us →
         </Link>
       </motion.div>
     </section>
