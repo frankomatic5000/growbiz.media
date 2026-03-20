@@ -79,16 +79,6 @@ export const SUBSIDIARIES = [
     accent: 'navy' as const,
     icon: 'Building2',
   },
-  {
-    id: 'clipiq',
-    name: 'ClipIQ',
-    tagline: 'Content intelligence & scheduling for media studios',
-    description:
-      'AI-powered caption generation, hook scoring, and publishing queue — built for media studios and content teams.',
-    url: '/clipiq',
-    accent: 'mustard' as const,
-    icon: 'Zap',
-  },
 ]
 
 export const IMPACT_STATS = [
