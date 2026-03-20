@@ -74,10 +74,19 @@ export const SUBSIDIARIES = [
     name: 'GrowBiz Media',
     tagline: 'The holding — our mission & story',
     description:
-      'The parent holding that unites eight brands under one mission: empowering multicultural entrepreneurs globally.',
+      'The parent holding that unites nine brands under one mission: empowering multicultural entrepreneurs globally.',
     url: '/about',
     accent: 'navy' as const,
     icon: 'Building2',
+  },
+  {
+    id: 'clipiq',
+    name: 'ClipIQ',
+    tagline: 'AI content automation — rebuilding',
+    description: 'Coming soon',
+    url: '#',
+    accent: 'gold' as const,
+    icon: 'Sparkles',
   },
 ]
 
