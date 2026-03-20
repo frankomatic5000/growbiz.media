@@ -31,11 +31,19 @@ export const metadata: Metadata = {
   description: 'A multicultural media holding empowering entrepreneurs, founders, and leaders through strategic production, events, and publishing.',
   icons: {
     icon: [
-      { url: '/assets/logo-dark.png', type: 'image/png' },
+      { url: '/favicon.ico?v=2', sizes: '16x16 32x32 48x48' },
+      { url: '/favicon-32x32.png?v=2', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png?v=2', type: 'image/png', sizes: '16x16' },
     ],
-    shortcut: '/assets/logo-dark.png',
-    apple: '/assets/logo-dark.png',
+    shortcut: '/favicon.ico?v=2',
+    apple: [
+      { url: '/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg?v=2', color: '#0a0a0a' },
+    ],
   },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'GrowBiz Media',
     description: 'A Global Media of Virtues',
