@@ -61,20 +61,28 @@ export function Hero() {
               />
             </motion.div>
 
+            {/* Tagline */}
+            <motion.span
+              variants={itemVariants}
+              className="font-body text-mustard uppercase tracking-widest text-sm mb-4"
+            >
+              A Global Media House
+            </motion.span>
+
             <motion.h1
               variants={itemVariants}
               className="font-display font-black text-cream text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6"
             >
-              Where Brands
+              Stories, Voices and
               <br />
-              Build Authority.
+              Ideas that Move the World
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="font-body text-cream/70 text-lg leading-relaxed mb-10 max-w-2xl"
             >
-              A multicultural media holding empowering entrepreneurs, founders, and leaders — globally. Nine brands, one mission, infinite impact.
+              A multicultural media ecosystem connecting entrepreneurs, creators and global communities through studios, publications and conversations.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 justify-center">
@@ -82,13 +90,13 @@ export function Hero() {
                 href="/contact"
                 className="font-body font-semibold bg-mustard text-navy px-8 py-4 rounded-sm hover:bg-mustard-dark transition-colors uppercase tracking-wide text-sm"
               >
-                Work With Us
+                Explore Our Platforms
               </Link>
               <Link
                 href="/subsidiaries"
                 className="font-body font-semibold border-2 border-cream/40 text-cream px-8 py-4 rounded-sm hover:bg-cream/10 transition-colors uppercase tracking-wide text-sm"
               >
-                Explore Our Universe
+                Discover the GrowBiz Universe
               </Link>
             </motion.div>
           </motion.div>
