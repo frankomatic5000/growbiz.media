@@ -63,7 +63,7 @@ export default function AboutPage() {
               Our Mission
             </p>
             <blockquote className="font-editorial text-2xl md:text-3xl text-navy font-semibold leading-snug border-l-4 border-mustard pl-6">
-              "To empower multicultural entrepreneurs, founders, and leaders with the media tools, visibility, and community they deserve."
+              &quot;To empower multicultural entrepreneurs, founders, and leaders with the media tools, visibility, and community they deserve.&quot;
             </blockquote>
           </motion.div>
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
               Our Vision
             </p>
             <blockquote className="font-editorial text-2xl md:text-3xl text-navy font-semibold leading-snug border-l-4 border-gold pl-6">
-              "A world where every multicultural business leader has a stage, a story, and a media ecosystem built for their success."
+              &quot;A world where every multicultural business leader has a stage, a story, and a media ecosystem built for their success.&quot;
             </blockquote>
           </motion.div>
         </div>

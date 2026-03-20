@@ -93,7 +93,7 @@ export const SUBSIDIARIES = [
 
 export const IMPACT_STATS = [
   { value: 500, suffix: '+', label: 'Entrepreneurs Served' },
-  { value: 8, suffix: '', label: 'Brands in the Portfolio' },
+  { value: 9, suffix: '', label: 'Brands in the Portfolio' },
   { value: 3, suffix: '', label: 'Core Media Pillars' },
   { value: 10, suffix: '+', label: 'Years of Community' },
 ]

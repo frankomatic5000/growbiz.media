@@ -26,7 +26,7 @@ export function SubsidiariesGrid() {
             Our Universe
           </h2>
           <p className="font-body text-gold text-lg mt-3">
-            Eight brands. One mission. Infinite impact.
+            Nine brands. One mission. Infinite impact.
           </p>
         </div>
 
