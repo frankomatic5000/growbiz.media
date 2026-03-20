@@ -1,0 +1,4 @@
+# GrowBiz Media CRM - Lead Tracking
+# Format: JSON Lines (one lead per line)
+# Fields: lead_id, timestamp, prospect_name, contact_method, contact_value, service_interest, budget_hint, score, status, assigned_to, source, captured_by
+
