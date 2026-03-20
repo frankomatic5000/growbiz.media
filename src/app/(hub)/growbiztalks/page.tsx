@@ -88,6 +88,15 @@ export default function GrowBizTalksPage() {
             </a>
           </div>
 
+          <div className="mb-16 rounded-lg border border-violet-900/30 bg-violet-950/20 p-8">
+            <h2 className="mb-4 text-2xl font-semibold">Apply to Speak</h2>
+            <p className="mb-6 text-neutral-300">
+              Ready to take the stage? Fill out the form below and our team will
+              review your application.
+            </p>
+            <LeadForm serviceType="growbiz_talks_speaking" source="talks_page" />
+          </div>
+
           <div className="mb-16">
             <h2 className="mb-6 text-2xl font-semibold">
               Follow GrowBiz Talks
