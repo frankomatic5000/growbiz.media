@@ -1,4 +1,5 @@
 import { SocialLinks } from "@/components/SocialLinks";
+import { LeadForm } from "@/components/LeadForm";
 
 export const metadata = {
   title: "GrowBiz Magazine — Stories That Shape Business",
@@ -68,6 +69,15 @@ export default function GrowBizMagazinePage() {
             >
               Apply to Be Featured →
             </a>
+          </div>
+
+          <div className="mb-16 rounded-lg border border-amber-900/30 bg-amber-950/20 p-8">
+            <h2 className="mb-4 text-2xl font-semibold">Get Featured</h2>
+            <p className="mb-6 text-neutral-300">
+              Ready to share your story? Fill out the form below and our editorial
+              team will review your submission.
+            </p>
+            <LeadForm serviceType="growbiz_magazine_feature" source="magazine_page" />
           </div>
 
           <div className="mb-16">

@@ -1,4 +1,5 @@
 import { SocialLinks } from "@/components/SocialLinks";
+import { LeadForm } from "@/components/LeadForm";
 
 export const metadata = {
   title: "Imigrou — Stories of the Brazilian Diaspora",
@@ -62,6 +63,15 @@ export default function ImigrouPage() {
           <div className="mb-16">
             <h2 className="mb-6 text-2xl font-semibold">Follow Imigrou</h2>
             <SocialLinks links={imigrouData.socialLinks} />
+          </div>
+
+          <div className="mb-16 rounded-lg border border-emerald-900/30 bg-emerald-950/20 p-8">
+            <h2 className="mb-4 text-2xl font-semibold">Quer ser entrevistado?</h2>
+            <p className="mb-6 text-neutral-300">
+              Tem uma história de imigração para compartilhar? Preencha o formulário
+              abaixo e nossa equipe entrará em contato.
+            </p>
+            <LeadForm serviceType="imigrou_collaboration" source="imigrou_page" />
           </div>
 
           <div className="mb-16 rounded-lg border border-neutral-800 bg-neutral-900/50 p-8">

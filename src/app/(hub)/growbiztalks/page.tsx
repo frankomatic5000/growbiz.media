@@ -1,4 +1,5 @@
 import { SocialLinks } from "@/components/SocialLinks";
+import { LeadForm } from "@/components/LeadForm";
 
 export const metadata = {
   title: "GrowBiz Talks — Live Stage for Founders",
