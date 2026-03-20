@@ -32,10 +32,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       from: process.env.EMAIL_FROM ?? 'noreply@growbiz.media',
     }),
   ],
-  pages: {
-    signIn: '/clipiq/login',
-    error: '/clipiq/login',
-  },
   callbacks: {
     jwt({ token, account }) {
       if (account?.provider === 'google') {
