@@ -29,6 +29,13 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: 'GrowBiz Media — A Global Media of Virtues',
   description: 'A multicultural media holding empowering entrepreneurs, founders, and leaders through strategic production, events, and publishing.',
+  icons: {
+    icon: [
+      { url: '/assets/logo-dark.png', type: 'image/png' },
+    ],
+    shortcut: '/assets/logo-dark.png',
+    apple: '/assets/logo-dark.png',
+  },
   openGraph: {
     title: 'GrowBiz Media',
     description: 'A Global Media of Virtues',

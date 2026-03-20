@@ -62,7 +62,7 @@ export function Navbar() {
             href="/contact"
             className="font-body text-sm font-semibold bg-mustard text-navy px-5 py-2.5 rounded-sm hover:bg-mustard-dark transition-colors uppercase tracking-wide"
           >
-            Work With Us
+            Explore Our Platforms
           </Link>
         </div>
 
