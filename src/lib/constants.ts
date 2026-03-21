@@ -5,7 +5,7 @@ export const SUBSIDIARIES = [
     tagline: 'Strategic media production for entrepreneurs',
     description:
       'Professional studio recording, course creation, podcast production, and teleprompter-assisted authority videos.',
-    url: 'https://growbizstudios.com',
+    url: '/growbizstudios',
     accent: 'mustard' as const,
     icon: 'Video',
   },
@@ -15,7 +15,7 @@ export const SUBSIDIARIES = [
     tagline: 'Live stage & speaking events platform',
     description:
       'Curated speaking stages where founders build authority, generate content, and expand their network.',
-    url: 'https://growbiztalks.com',
+    url: '/growbiztalks',
     accent: 'navy' as const,
     icon: 'Mic',
   },
@@ -35,7 +35,7 @@ export const SUBSIDIARIES = [
     tagline: 'Community and resources for immigrants',
     description:
       'Supporting immigrant entrepreneurs and professionals with tools, community, and visibility.',
-    url: 'https://imigrou.com',
+    url: '/imigrou',
     accent: 'mustard' as const,
     icon: 'Globe',
   },
@@ -45,7 +45,7 @@ export const SUBSIDIARIES = [
     tagline: 'Lifestyle & culture brand',
     description:
       'A creative lifestyle brand celebrating multicultural identity, culture, and expression.',
-    url: '#',
+    url: '/pernascruzadas',
     accent: 'navy' as const,
     icon: 'Sparkles',
   },
@@ -55,7 +55,7 @@ export const SUBSIDIARIES = [
     tagline: 'Network for global professionals',
     description:
       'Connecting Brazilian and multicultural professionals building careers and businesses across borders.',
-    url: '#',
+    url: 'https://pessoasglobais.com',
     accent: 'gold' as const,
     icon: 'Users',
   },
@@ -65,7 +65,7 @@ export const SUBSIDIARIES = [
     tagline: 'Premium lifestyle services',
     description:
       'Curated premium services for entrepreneurs who value excellence in every detail of their brand.',
-    url: '#',
+    url: 'https://vaptlux.com',
     accent: 'mustard' as const,
     icon: 'Star',
   },
